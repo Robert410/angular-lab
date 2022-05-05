@@ -1,0 +1,69 @@
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>    
+  
+  <div class="container">
+    <div class="row">
+      <form (ngSubmit)="onButtonClicked()">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input required type="text" class="form-control" id="city" name="city" [(ngModel)]="city" placeholder="Enter city" #name="ngModel">
+            </div>
+            <div *ngIf="city.invalid && (city.dirty || city.touched)"
+    class="alert">
+
+  <div *ngIf="city.errors?.['required']">
+    City is required.
+  </div>
+  </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input required type="text" class="form-control" id="country" name="country" [(ngModel)]="country" placeholder="Enter country">
+            </div>
+            <div *ngIf="country.invalid && (country.dirty || country.touched)"
+    class="alert">
+
+  <div *ngIf="country.errors?.['required']">
+    country is required.
+  </div>
+  </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input required type="text" class="form-control" id="description" name="description" [(ngModel)]="description" placeholder="Enter description">
+            </div>
+            <div *ngIf="description.invalid && (description.dirty || description.touched)"
+    class="alert">
+
+  <div *ngIf="description.errors?.['required']">
+    description is required.
+  </div>
+  </div>
+            <div class="form-group">
+                <label for="targets">Tourist Targets</label>
+                <input required type="text" class="form-control" id="targets" name="targets" [(ngModel)]="targets" placeholder="Enter tourist targets">
+            </div>
+            <div *ngIf="targets.invalid && (targets.dirty || targets.touched)"
+    class="alert">
+
+  <div *ngIf="targets.errors?.['required']">
+    targets is required.
+  </div>
+  </div>
+            <div class="form-group">
+                <label for="cost">Costs</label>
+                <input required type="number" min="0" class="form-control" id="cost" name="cost" [(ngModel)]="cost" placeholder="Enter estimated daily cost">
+            </div>
+            <div *ngIf="cost.invalid && (cost.dirty || cost.touched)"
+    class="alert">
+
+  <div *ngIf="cost.errors?.['required']">
+    cost is required.
+  </div>
+  </div>
+            <button type="submit" class="btn btn-success mt-5">{{buttonText}}</button>
+            <a href="javascript:history.back()" type="button" class="btn btn-secondary mt-5 float-end">Back</a>
+
+        </form>
+    </div>
+</div>
+  

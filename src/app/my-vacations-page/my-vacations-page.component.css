@@ -1,0 +1,15 @@
+.createvacationButton{
+    margin-top: 3vh;
+    padding: 1vh;
+    margin-left: calc(10vw + 9vh);
+}
+.divsVacation{
+    border: 4px dotted gray;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    padding: 5vh;
+    margin: 1vh;
+    width: 30vw;
+    margin-left: 5vw;
+}
